@@ -1,0 +1,42 @@
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "Prontuário Eletrônico", root_path, class: "brand" %>
+      <nav>
+        <ul class="nav pull-right">
+         
+          <% if user_signed_in? %>
+            
+          <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Pacientes <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Novo", new_patient_path %></li>
+                <li><%= link_to "Editar", current_patient %></li>
+                <li><%= link_to "Procurar", patients_path %></li>
+              </ul>
+            </li>
+
+
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Usuário <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%=link_to current_user.name, '#'%></li>
+                <li class="divider"></li>
+                <li><%= link_to "Editar Cadastro", edit_user_registration_path %>
+                <li><%= link_to "Settings", '#'%></li>
+                <li class="divider"></li>
+                <li><%= link_to "Sair", destroy_user_session_path, method: "delete" %></li>
+              </ul>
+            </li>
+          <% else %>
+            <li></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

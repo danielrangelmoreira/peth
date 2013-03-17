@@ -1,0 +1,15 @@
+<%= simple_form_for @patient, defaults: { input_html: { class: 'well span8' } }   do |f| %>
+  <%= f.input :rghc, label: "RGHC" %>
+
+  <%= f.input :name, label: 'Nome' %>
+    <%= f.input :dob, label: "Data de Nascimento" %>
+
+  <%= f.input :address, label: 'Endereço' %>
+  <%= f.input :city, label: 'Cidade' %>
+  <%= f.input :state, label: 'Estado' %>
+  <%= f.input :phone, label: 'Telefone' %>
+  <%= f.input :email, label: "Email", placeholder: 'user@domain.com' %>
+
+  <%= f.button :submit %>
+<% end %>
+

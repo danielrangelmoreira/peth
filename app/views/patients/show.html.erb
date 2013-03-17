@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+
+	<div class="row">
+
+
+		<div class="span4">
+			<h3><%= @patient.name.titleize %></h3>
+			<div>RGHC: <strong><%= @patient.rghc %></div></strong>
+			<div>Dt. Nasc.: <%= format_date(@patient.dob) %></div>
+			<div>Email: <%= @patient.email %></div><br>
+		</div>
+
+		<div class="span4">
+			<b>Endereço:</b>
+			<em>
+			<div><%= @patient.address %></div>
+			<div><%= @patient.city %></div>
+			<div><%= @patient.state %></div>
+			<div><%= @patient.phone %></div>
+			</em>
+		</div>
+
+		<div class="span4">
+			<h4>Complicações</h4>
+			<p><%=Faker::Lorem.sentence%></p>
+		</div>
+
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="span12">
+		<table class="table table-striped table-bordered table-condensed pretty">
+
+		    <thead>
+		    	<tr>
+		    		<th align="center">
+		    			Atendimentos do Paciente
+		    		</th>
+
+		    	</tr>
+		        <tr>
+		            <th><%=sortable "ap_date", "Data" %></th>
+		            <th><%=sortable "local", "Local"%></th>
+		            <th><%=sortable "kind", "Tipo"%></th>
+		            
+		        </tr>
+		    </thead>
+		    <tbody>
+		  <% @appointments.each do |appointment| %>
+		  <tr>
+		    <td><%= format_date(appointment.ap_date) %></td>
+		    <td><%= appointment.local%></td>
+		    <td><%= appointment.kind%></td>
+		  </tr>
+		  <tr>
+		  	<%=record_content(appointment) %>
+		  	
+		  </tr>
+		  <% end %>
+		  </tbody>
+		</table>
+		<%= will_paginate @appointments%>
+	</div>
+
+</div>
+</div>
+
+

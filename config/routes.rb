@@ -1,4 +1,14 @@
 Peth::Application.routes.draw do
+
+  match '/appointments' => 'appointments#new'
+  resources :patients
+
+
+  resources :physicians
+
+
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +58,7 @@ Peth::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 

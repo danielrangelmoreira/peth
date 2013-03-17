@@ -1,0 +1,6 @@
+<%= simple_form_for @appointment do |f| %>
+  <%= f.input :ap_date, label: "Data do Atendimento" %>
+  <%= f.input :local, label: "Local do Atendimento"%>
+  <%= f.input :kind, label: "Tipo" %>
+  <%= f.button :submit %>
+<% end %>
