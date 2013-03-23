@@ -1,0 +1,9 @@
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: peth_production
+  pool: 5
+  host: localhost
+  username: peth
+  password: 'secret'
