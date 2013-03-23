@@ -66,7 +66,7 @@ Peth::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
  #Action::Mailer
-  config.action_mailer.default_url_options = { :host => 'ec2-50-19-79-61.compute-1.amazonaws.com' }
+  config.action_mailer.default_url_options = { :host => 'peth.danielrangel.med.br' }
 # ActionMailer Config
 # Setup for production - deliveries, no errors raised
 config.action_mailer.delivery_method = :smtp
