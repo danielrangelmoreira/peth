@@ -34,5 +34,5 @@ pickle-email-*.html
 >>>>>>> a5f1d68a846c09f8c0dfa5b2f6738d3fa38c1d47
 
 # Ignore application configuration
-
+/config/application.yml
 .elasticbeanstalk/
