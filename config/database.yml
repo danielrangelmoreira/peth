@@ -1,0 +1,18 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: peth_development
+  pool: 5
+  username: daniel
+  password:
+
+  
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: peth_production
+  pool: 5
+  host: localhost
+  username: peth
+  password: 'secret'
+
