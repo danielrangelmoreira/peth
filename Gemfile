@@ -10,7 +10,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'pg_search'
 gem 'simple_form'
-  gem 'figaro'
+gem 'figaro'
 
 # Gems used only for assets and not required
 # in production environments by default.
